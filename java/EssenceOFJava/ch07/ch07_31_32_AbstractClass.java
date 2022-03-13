@@ -66,8 +66,8 @@ package EssenceOFJava.ch07;
 public class ch07_31_32_AbstractClass {
     public static void main(String[] args) {
         // Player p = new Player();    //  추상 클래스의 객체를 생성 ---> 객체 생성 X
-        // AudioPlayer ap = new AudioPlayer();
-        Player ap = new AudioPlayer();  //  다형성
+        AudioPlayer ap = new AudioPlayer();
+        // Player ap = new AudioPlayer();  //  다형성
         ap.play(100);
         ap.stop();
     }
@@ -79,7 +79,7 @@ abstract class Player { //  추상 클래스(미완성 클래스, 미완성 설�
 }
 
 // 추상 클래스는 상속을 통해 완성해야 객체 생성가능
-abstract class AudioPlayer extends Player {
+class AudioPlayer extends Player {
     void play(int pos) { System.out.println(pos+"위치부터 play합니다.");}
-    // void stop() { System.out.println("재생을 멈춥니다.");}
+    void stop() { System.out.println("재생을 멈춥니다.");}
 } 
