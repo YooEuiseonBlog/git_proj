@@ -42,7 +42,7 @@ public class phoneBll_3226 {
                 }
 
                 // 분 계산
-                mm[n] += 1;
+                mm[n] += 1; // 11:30 11분 ---> 11:31
 
                 if (mm[n] == 60) {
                     hh[n] += 1;
